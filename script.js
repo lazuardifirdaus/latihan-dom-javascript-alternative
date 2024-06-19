@@ -19,26 +19,28 @@ const showResult = (firstNumber, secondNumber, sum) => {
     let resultContainer = document.getElementById('checkResult');
     let resultText;
 
+    const lineBreak = document.createElement("br");
+
     if (sum === 0){
         alert("Inputnya tidak valid!");
         resultText = undefined;
     } else if (sum % 3 === 0 && sum % 5 === 0) {
         resultContainer.innerHTML += "<br />";
-        resultText = `FizzBuzz = ${firstNumber} + ${secondNumber} "<br />"`;
+        resultText = `FizzBuzz = ${firstNumber} + ${secondNumber}`;
     } else if (sum % 3 === 0) {
         resultContainer.innerHTML += "<br />";
-        resultText = `Fizz = ${firstNumber} + ${secondNumber} "<br />"`;
+        resultText = `Fizz = ${firstNumber} + ${secondNumber}`;
     } else if (sum % 5 === 0) {
         resultContainer.innerHTML += "<br />";
-        resultText = `Buzz = ${firstNumber} + ${secondNumber} resultCon`;
+        resultText = `Buzz = ${firstNumber} + ${secondNumber}`;
     } else {
         resultContainer.innerHTML += "<br />";
-        resultText = `${firstNumber + secondNumber} "<br />"`;
+        resultText = `${firstNumber + secondNumber}`;
     }
 
     if (typeof resultText === 'undefined'){
         resultContainer.innerHTML = ""; // Menggunakan innerHTML untuk menampilkan hasil
     } else {
-        resultContainer.append(resultText) ; // Menggunakan innerHTML untuk menampilkan hasil
+        resultContainer.append(resultText, lineBreak); // Menggunakan innerHTML untuk menampilkan hasil
     }
 }
