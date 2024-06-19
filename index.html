@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan DOM Javascript</title>
+</head>
+
+<body>
+    <h1>Latihan Javascript DOM</h1>
+    <hr>
+    <br>
+    <form action="index.html" method="get" onsubmit="calculatingInput('number1', 'number2'); return false;">
+        <div class="number-container">
+            <label for="number1">Type number 1</label>
+            <input type="text" name="number1" id="number1" placeholder="Type number in here">
+        </div>
+
+        <br> <!-- temp br -->
+
+        <div class="number-container">
+            <label for="number2">Type number 2</label>
+            <input type="text" name="number2" id="number2" placeholder="Type number in here">
+        </div>
+
+        <br> <!-- temp br -->
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="checkResult"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
