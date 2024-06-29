@@ -25,10 +25,7 @@ const showResult = (firstNumber, secondNumber, sum) => {
 
     const lineBreak = document.createElement("br");
 
-    if (sum === 0){
-        alert(`Input ${sum} is not valid`);
-        return;
-    } else if (sum % 3 === 0 && sum % 5 === 0) {
+    if (sum % 3 === 0 && sum % 5 === 0) {
         resultContainer.innerHTML += "<br />";
         resultText = `FizzBuzz = ${firstNumber} + ${secondNumber}`;
     } else if (sum % 3 === 0) {
