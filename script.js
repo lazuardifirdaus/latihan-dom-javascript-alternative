@@ -7,12 +7,16 @@ const calculatingInput = (input_text_1, input_text_2) => {
 
     let sum = firstNumber + secondNumber;
 
+    // Pengecekan input nilai 0, dengan return nilainya "false"
     if (isNaN(sum)){
         alert(`Input ${input_1.value}${input_2.value} is not number`);
         return false;
+    } else if (Number(input_1.value) === 0 || Number(input_2.value) === 0) {
+        alert(`You can't input 0`);
+        return false;
+    } else {
+        showResult(firstNumber, secondNumber, sum); // Panggil showResult di sini
     }
-
-    showResult(firstNumber, secondNumber, sum); // Panggil showResult di sini
 }
 
 const showResult = (firstNumber, secondNumber, sum) => {
@@ -41,6 +45,6 @@ const showResult = (firstNumber, secondNumber, sum) => {
     if (typeof resultText === 'undefined'){
         resultContainer.innerHTML = ""; // Menggunakan innerHTML untuk menampilkan hasil
     } else {
-        resultContainer.append(resultText, lineBreak); // Menggunakan innerHTML untuk menampilkan hasil
+        resultContainer.append(resultText, lineBreak);
     }
 }
